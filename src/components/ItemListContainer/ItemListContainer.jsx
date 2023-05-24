@@ -33,11 +33,11 @@ const ItemListContainer = ({ greeting }) => {
   }, [categoryId]);
 
   return (
-    <div>
+  <div>
       <h1>{greeting}</h1>
       {loading ? <p>Cargando...</p> : <ItemList producto={producto} />}
     </div>
-  );
+  )
 };
 
 export default ItemListContainer;
