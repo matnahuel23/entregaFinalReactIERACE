@@ -1,0 +1,46 @@
+import './ItemDetailContainer.css'
+import { useState, useEffect } from 'react'
+import ItemDetail from '../ItemDetail/ItemDetail'
+import { useParams } from 'react-router-dom'
+import { getDoc, doc } from 'firebase/firestore'
+import { db } from '../../service/firebase/fireBaseConfig'
+
+/* Muestra 1 de los productos*/
+
+const ItemDetailContainer = () => {
+    const [producto, setProduct] = useState(null)
+    const [loading, setLoading] = useState(true)
+
+    const {itemId} = useParams()
+
+    useEffect (()=>{
+        setLoading(true)
+
+        const docRef = doc (db, 'producto', itemId)
+
+        getDoc (docRef)
+        .then (response => {
+            const data = response.data()
+            const productsAdapted = {id: response.id, ...data}
+            setProduct(productsAdapted)
+        })
+        .catch (error => {
+            console.log(error)
+        })
+        .finally (()=> {
+            setLoading(false)
+        })
+    }, [itemId])
+
+    return (
+        <div className='ItemDetailContainer'>{ 
+            loading ? ( <p>Cargando...</p>
+            ) : (
+            <ItemDetail {...producto}/>
+            )
+        }
+        </div>
+    )
+}
+
+export default ItemDetailContainer

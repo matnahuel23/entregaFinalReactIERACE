@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Open+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Unna:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap");
+* {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  padding-bottom: 2vh;
+  text-decoration: dotted;
+  text-align: center;
+  font-size: 2em;
+  font-family: "Bebas Neue", cursive;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+  min-height: 100vh;
+  margin-bottom: 0;
+}

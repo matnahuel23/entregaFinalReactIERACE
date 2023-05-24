@@ -1,0 +1,22 @@
+.CardItem {
+    display: flex;
+    background-color: rgb(158, 152, 152);
+    flex-wrap: wrap;
+    width: 75%;
+    align-items: center;
+    justify-content: center;
+}
+
+.Header{
+    background-color: rgb(57, 53, 53);
+    color: aliceblue;
+    width: auto;
+}
+
+.ItemImg {
+    height: 60%;
+}
+
+.Information{
+    width: 90%;
+}

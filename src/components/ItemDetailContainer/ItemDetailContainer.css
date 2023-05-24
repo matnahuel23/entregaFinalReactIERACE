@@ -1,0 +1,16 @@
+/* FONDO PELI POR DETALLE */
+.ItemDetailContainer {
+        background-image: url("https://previews.123rf.com/images/thanamat/thanamat1310/thanamat131000146/23655591-fondo-con-pel%C3%ADculas-cine.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 98vw;
+        align-content:space-around;
+        justify-content: center;
+        flex-wrap:wrap;
+        align-items: stretch;
+        flex-direction:row;
+}
+

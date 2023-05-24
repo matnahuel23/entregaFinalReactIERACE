@@ -1,0 +1,24 @@
+.CardItem{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+}
+
+.ItemImg{
+    display: flex;
+}
+
+.Information{
+    font-size: 2rem;
+}
+
+.ItemFooter{
+    font-style:oblique;
+    font-size: 2rem;
+}
+
+.Option{
+    text-decoration: none;
+}
