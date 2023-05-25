@@ -4,7 +4,7 @@ import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 import { CartContext} from '../../context/CartContext'
 
-const ItemDetail = ({id, name, img, category, description, price, stock}) => {
+const ItemDetail = ({id, name, image, category, description, price, stock}) => {
     const [quantityAdded, setQuantityAdded] = useState(0)
 
     const {addItem} = useContext (CartContext)
@@ -27,7 +27,7 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) => {
                 </h2>
             </header>
             <picture className='ItemImagen'>
-                <img src={img} alt={name} className='ItemImg'/>
+                <img src={image} alt={name} className='ItemImg'/>
             </picture>
             <section className='Information'>
                 <p className='Info'>

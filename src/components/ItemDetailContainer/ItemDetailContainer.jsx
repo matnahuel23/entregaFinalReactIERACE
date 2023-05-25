@@ -6,20 +6,16 @@ import { getDoc, doc } from 'firebase/firestore'
 import { db } from '../../service/firebase/fireBaseConfig'
 
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState(null)
-    const [loading, setLoading] = useState(true)
-    const { itemId } = useParams()
+    const [product, setProduct] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const { itemId } = useParams();
+    const docRef = doc(db, "productos", itemId);
 
     useEffect(() => {
-        setLoading(true)
-
-        const docRef = doc(db, "products", itemId)
-
         getDoc(docRef)
             .then(response => {
-                const data = response.data()
-                const productsAdapted = { id: response.id, ...data }
-                setProduct(productsAdapted)
+                const data = response.data();
+                setProduct ({ id: response.id, ...data })
             })
             .catch(error => {
                 console.log(error)
@@ -32,7 +28,7 @@ const ItemDetailContainer = () => {
     return (
         <div className='ItemDetailContainer'>
             {
-                loading ? (<p>Cargando...</p>) : (<ItemDetail {...product} />)
+                loading ? (<p>Cargando...</p>) : (<ItemDetail producto={product} />)
             }
         </div>
     )

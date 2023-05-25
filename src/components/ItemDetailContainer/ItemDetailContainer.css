@@ -12,5 +12,6 @@
         flex-wrap:wrap;
         align-items: stretch;
         flex-direction:row;
+        height: 100vh;
 }
 

@@ -5,7 +5,7 @@ import { getDocs, collection, query, where } from "firebase/firestore";
 import { db } from "../../service/firebase/fireBaseConfig";
 
 const ItemListContainer = ({ greeting }) => {
-  const [producto, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const { categoryId } = useParams();
 
@@ -35,7 +35,7 @@ const ItemListContainer = ({ greeting }) => {
   return (
   <div>
       <h1>{greeting}</h1>
-      {loading ? <p>Cargando...</p> : <ItemList producto={producto} />}
+      {loading ? <p>Cargando...</p> : <ItemList producto={products} />}
     </div>
   )
 };
