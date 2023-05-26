@@ -1,29 +1,38 @@
-import './Cart.css'
-import { useContext } from 'react'
-import { CartContext} from '../../context/CartContext'
-import CartItem from '../CartItem/CartItem'
-import { Link } from 'react-router-dom'
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
+import CartItem from "../CartItem/CartItem";
 
 const Cart = () => {
-    const {cart, clearCart, totalQuantity, total} = useContext (CartContext)
+  const { cart, clearCart, total } = useContext(CartContext);
 
-    if (totalQuantity === 0){
-        return (
-            <div>
-                <h1>No hay peliculas en el carrito</h1>
-                <Link to='/' className='Option'>Películas</Link>
-            </div>
-        )
-    }
+  if (!cart || cart.length === 0) {
+    return (
+      <div>
+        <h1>No hay películas en el carrito</h1>
+        <Link to="/" className="Option">
+          Películas
+        </Link>
+      </div>
+    );
+  }
 
-    return(
-        <div>
-            { cart.map(p => <CartItem key={p.id}{...p}/>)}
-            <h3>Total: ${total}</h3>
-            <button onClick={() => clearCart()} className="Button">Limpiar carrito de compras</button>
-            <Link to='/checkout' className='Option'>Checkout</Link>
+  return (
+    <div>
+      {cart.map((item) => (
+        <div key={item.id}>
+          <CartItem item={item} />
         </div>
-    )
-}
+      ))}
+      <h3>Total: ${isNaN(total()) ? 0 : total()}</h3>
+      <button onClick={() => clearCart()} className="Button">
+        Limpiar carrito
+      </button>
+      <Link to="/checkout" className="Option">
+        Checkout
+      </Link>
+    </div>
+  );
+};
 
 export default Cart;
