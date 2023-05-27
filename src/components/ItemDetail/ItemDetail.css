@@ -1,20 +1,19 @@
 .CardItem {
     display: flex;
-    background-color: rgb(158, 152, 152);
-    flex-wrap: wrap;
-    width: 75%;
+    flex-direction: column;
+    background-color: rgb(105 96 96 / 90%);
+    width: 60%;
     align-items: center;
-    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    
+
 }
 
 .Header{
     background-color: rgb(57, 53, 53);
     color: aliceblue;
     width: auto;
-}
-
-.ItemImg {
-    height: 60%;
 }
 
 .ButtonLink {
@@ -36,3 +35,25 @@
     background-color: #bbb;
   }
   
+  .ItemImagen{
+    margin: 20px;
+  }
+
+  p{
+    font-size: 2rem;
+    color: white;
+  }
+
+  #stock{
+    color:rgba(94, 171, 207, 0.9)
+  }
+
+  #precio{
+    font-size: 3rem;
+    color: blue;
+  }
+
+  .ItemHeader{
+    padding: 10px;
+    font-size: 3rem;
+  }

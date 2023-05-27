@@ -31,14 +31,14 @@ const ItemDetail = () => {
                 <img src={image} alt={name} className='ItemImg'/>
             </picture>
             <section className='Information'>
-                <p className='Info'>
-                    Descripción = {description}
+                <p id="descrip" className='Info'>
+                    Descripción: {description}
                 </p>
-                <p className='Info'>
-                    Stock disponible = {stock}
+                <p id="stock" className='Info'>
+                    Stock disponible: {stock}
                 </p>
-                <p className='Info'>
-                    Precio = $ {price}
+                <p id="precio" className='Info'>
+                    Precio: $ {price}
                 </p>
             </section>
             <footer className='ItemFooter'>
