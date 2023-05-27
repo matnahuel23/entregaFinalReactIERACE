@@ -24,32 +24,32 @@ const NavBar = () => {
             <div className='Categories' class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                    <NavLink class="nav-link active" aria-current="page" to={`category/terror`} className={({isActive})=> isActive ? 'ActiveOption' : 'Option'}>
+                    <NavLink to={`category/terror`} className={`nav-link active PlainLink NavLinkCustom`} activeClassName="ActiveOption" exact>
                         Terror
                     </NavLink>
                     </li>
                     <li class="nav-item">
-                    <NavLink class="nav-link active" aria-current="page" to={`category/suspenso`} className={({isActive})=> isActive ? 'ActiveOption' : 'Option'}>
+                    <NavLink to={`category/suspenso`} className={`nav-link active PlainLink NavLinkCustom`} activeClassName="ActiveOption" exact>
                         Suspenso
                     </NavLink>
                     </li>
                     <li class="nav-item">
-                    <NavLink class="nav-link active" aria-current="page" to={`category/comedia`} className={({isActive})=> isActive ? 'ActiveOption' : 'Option'}>
+                    <NavLink to={`category/comedia`} className={`nav-link active PlainLink NavLinkCustom`} activeClassName="ActiveOption" exact>
                         Comedia
                     </NavLink>
                     </li>
                     <li class="nav-item">
-                    <NavLink class="nav-link active" aria-current="page" to={`category/romantica`} className={({isActive})=> isActive ? 'ActiveOption' : 'Option'}>
+                    <NavLink to={`category/romantica`} className={`nav-link active PlainLink NavLinkCustom`} activeClassName="ActiveOption" exact>
                         Romantica
                     </NavLink>
                     </li>
                     <li class="nav-item">
-                    <NavLink class="nav-link active" aria-current="page" to={`category/fantasia`} className={({isActive})=> isActive ? 'ActiveOption' : 'Option'}>
+                    <NavLink to={`category/fantasia`} className={`nav-link active PlainLink NavLinkCustom`} activeClassName="ActiveOption" exact>
                         Fantasia
                     </NavLink>
                     </li>
                     <li class="nav-item">
-                    <NavLink class="nav-link active" aria-current="page" to={`category/policial`} className={({isActive})=> isActive ? 'ActiveOption' : 'Option'}>
+                    <NavLink to={`category/policial`} className={`nav-link active PlainLink NavLinkCustom`} activeClassName="ActiveOption" exact>
                         Policial
                     </NavLink>
                     </li>

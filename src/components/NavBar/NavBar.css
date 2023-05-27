@@ -1,0 +1,15 @@
+.PlainLink {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .NavLinkCustom {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .NavLinkCustom:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+  

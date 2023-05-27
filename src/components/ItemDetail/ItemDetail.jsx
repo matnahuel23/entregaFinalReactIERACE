@@ -44,10 +44,18 @@ const ItemDetail = () => {
             <footer className='ItemFooter'>
                 {
                     quantityAdded > 0 ? (
-                        <Link to ='/cart' className='Option'>Terminar compra</Link>
+                        <div>
+                        <Link to ='/cart' className='Option ButtonLink'>
+                            Terminar compra
+                        </Link>
+                        <Link to='/' className='Option ButtonLink'>
+                            Seguir comprando
+                        </Link>
+                        </div>
                     ) : (
                         <ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>
                     )
+                    
                 }
             </footer>
         </article>

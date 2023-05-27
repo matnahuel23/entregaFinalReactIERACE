@@ -1,0 +1,18 @@
+.ButtonLink {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .ButtonLink:hover {
+    background-color: #ddd;
+  }
+  
+  .ButtonLink:active {
+    background-color: #bbb;
+  }
