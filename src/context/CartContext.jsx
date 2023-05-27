@@ -12,6 +12,7 @@ export const CartProvider = ({ children}) => {
         cart.forEach ((item) => quantity += item.quantity)
         return quantity
     }
+    
 
     const addItem = (item, quantity) => {
         if(!isInCart(item.id)){
