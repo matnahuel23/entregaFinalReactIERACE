@@ -13,7 +13,7 @@ const CartItem = ({ item }) => {
       <img src={item.image} alt={item.name} />
       <h2>{item.name}</h2>
       <p>Precio: ${item.price}</p>
-      <p>Stock disponible: {item.stock}</p>
+      <p>Cantidad: {item.quantity}</p>
       <button onClick={handleRemoveItem}>Eliminar producto</button>
     </div>
   );
