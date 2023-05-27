@@ -32,10 +32,10 @@ const ItemDetail = () => {
             </picture>
             <section className='Information'>
                 <p className='Info'>
-                    Categoria = {category}
+                    Descripción = {description}
                 </p>
                 <p className='Info'>
-                    Descripción = {description}
+                    Stock disponible = {stock}
                 </p>
                 <p className='Info'>
                     Precio = $ {price}

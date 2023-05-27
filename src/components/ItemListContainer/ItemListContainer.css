@@ -1,0 +1,9 @@
+#presentacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("https://usagif.com/wp-content/uploads/gifs/water-43.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}

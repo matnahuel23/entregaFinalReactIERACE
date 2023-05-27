@@ -8,19 +8,17 @@
 }
 
 h1 {
-  padding-bottom: 2vh;
   text-decoration: dotted;
   text-align: center;
   font-size: 2em;
   font-family: "Bebas Neue", cursive;
+  color: rgb(72, 51, 194);
 }
 
 body {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: center;
-  width: 100%;
-  min-height: 100vh;
-  margin-bottom: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
 }
