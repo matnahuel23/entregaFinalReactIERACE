@@ -11,6 +11,13 @@
 
 #imagenes{
     display: flex;
+    height: 86vh;
+}
+
+#imagenes img {
+  width: auto;
+  height: 80vh;
+  margin-bottom: 0;
 }
 
 .carousel-caption {

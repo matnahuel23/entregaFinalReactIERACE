@@ -26,23 +26,25 @@ const Cart = () => {
   }
 
   return (
-    <div>
+    <div id="compraLista">
       {cart.map((item) => (
-        <div key={item.id}>
+        <div id="cadaCompra" key={item.id}>
           <CartItem item={item} />
         </div>
       ))}
+      <div id="ventaPagar">
       <h3>Total: ${isNaN(total()) ? 0 : total()}</h3>
       <div className="botonera">
-        <button onClick={handleClearCart} className="Button ButtonLink">
+        <button onClick={handleClearCart} className="Button ButtonLink" type="button" class="btn btn-danger">
           Vaciar carrito
         </button>
-        <Link to="/" className="Option ButtonLink">
+        <Link to="/" className="Option ButtonLink" type="button" class="btn btn-info">
           Seguir comprando
         </Link>
-        <Link to="/checkout" className="Option ButtonLink">
+        <Link to="/checkout" className="Option ButtonLink" type="button" class="btn btn-success">
           Pagar
         </Link>
+        </div>
       </div>
     </div>
   );

@@ -5,5 +5,32 @@
     background-image: url("https://usagif.com/wp-content/uploads/gifs/water-43.gif");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
 }
+
+#compraLista {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  #ventaPagar {
+    position: sticky;
+    flex-direction: column;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 5vh;
+  }
+
+  .CartItem img {
+    height: 40vh;
+    object-fit: cover;
+    
+  }

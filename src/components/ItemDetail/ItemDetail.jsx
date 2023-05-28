@@ -54,10 +54,10 @@ const ItemDetail = () => {
                 {
                     quantityAdded > 0 ? (
                         <div>
-                        <Link to ='/cart' className='Option ButtonLink'>
-                            Terminar compra
+                        <Link to ='/cart' className='Option ButtonLink' class="btn btn-primary btn-lg">
+                            Ir al carrito
                         </Link>
-                        <Link to='/' className='Option ButtonLink'>
+                        <Link to='/' className='Option ButtonLink' class="btn btn-primary btn-lg">
                             Seguir comprando
                         </Link>
                         </div>
