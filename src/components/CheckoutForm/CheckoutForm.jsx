@@ -15,37 +15,34 @@ const CheckoutForm = ({onConfirm}) => {
     }
 
     return(
-        <div className='Container'>
+        <div className='Container' class="mb-3">
             <form onSubmit={handleConfirm} className='Form'>
-                <label className='Label'>
+                <label className='Label' for="exampleFormControlInput1" class="form-label">
                     Nombre
-                    <input
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Juan Perez"
                         className='Input'
-                        type='text'
                         value={name}
                         onChange={({target}) => setName (target.value)}
                     />
                 </label>
-                <label className='Label'>
+                <label className='Label' for="exampleFormControlInput2" class="form-label">
                     Teléfono
-                    <input
+                    <input type="tel" class="form-control" id="exampleFormControlInput2" placeholder="12345"
                         className='Input'
-                        type='tel'
                         value={phone}
                         onChange={({target}) => setPhone (target.value)}
                     />
                 </label>
-                <label className='Label'>
-                    Email
-                    <input
+                <label className='Label' for="exampleFormControlInput3" class="form-label">
+                    Email   
+                    <input type="email" class="form-control" id="exampleFormControlInput3" placeholder="name@example.com"
                         className='Input'
-                        type='email'
                         value={email}
                         onChange={({target}) => setEmail (target.value)}
                     />
                 </label>
                 <div className='Label'>
-                    <button type='submit' className='Button'>Crear Orden</button>    
+                    <button type='submit' className='Button' class="btn btn-success">Crear Orden</button>    
                 </div>
             </form>
         </div>
