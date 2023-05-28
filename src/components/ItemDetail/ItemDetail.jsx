@@ -7,18 +7,19 @@ import { CartContext} from '../../context/CartContext'
 const ItemDetail = () => {
     const [quantityAdded, setQuantityAdded] = useState(0)
     const {state} = useLocation()
-    const {id, name, image, category, description, price, stock}= state ;
+    const {id, name, image, trailer, description, price, stock}= state ;
     const {addItem} = useContext (CartContext)
 
     const handleOnAdd = (quantity) => {
         setQuantityAdded(quantity)
 
         const item = {
-            image, id, name, price, quantity
+            image, id, name, price, quantity, trailer
         }
 
         addItem (item, quantity)
     }
+
 
     return (
         <article className='CardItem'>
@@ -27,9 +28,17 @@ const ItemDetail = () => {
                     {name}
                 </h2>
             </header>
-            <picture className='ItemImagen'>
-                <img src={image} alt={name} className='ItemImg'/>
-            </picture>
+            <div className='ItemTrailer'>
+            <iframe
+            width='560'
+            height='315'
+            src={trailer}
+            title='YouTube video player'
+            frameBorder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+            allowFullScreen
+            ></iframe>
+      </div>
             <section className='Information'>
                 <p id="descrip" className='Info'>
                     Descripción: {description}

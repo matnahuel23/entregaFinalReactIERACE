@@ -8,7 +8,7 @@ const ItemList = ({ producto }) => {
         {producto.map((prod, index) => (
           <div id="divDetalles" className={`carousel-item ${index === 0 ? "active" : ""}`}>
             <img src={prod.image} className="d-block w-100" alt={prod.name} />
-            <div id="divDetalle" className="carousel-caption d-none d-md-block">
+            <div id="divDetalle" className="carousel-caption d-md-block">
              <Item key={prod.id} {...prod} />
             </div>
           </div>
