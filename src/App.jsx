@@ -1,6 +1,9 @@
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import 'sweetalert2/dist/sweetalert2.min.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
@@ -25,6 +28,7 @@ function App(){
           </Routes>
         </CartProvider>
       </BrowserRouter>
+      <ToastContainer />
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import './CheckoutForm.css'
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const CheckoutForm = ({onConfirm}) => {
     const [name, setName] = useState('')
@@ -9,7 +10,7 @@ const CheckoutForm = ({onConfirm}) => {
     const handleConfirm = (event) => {
         event.preventDefault()
         if (name.trim() === '' || phone.trim() === '' || email.trim() === '') {
-            alert('Por favor, completa todos los campos');
+            toast.info("Por favor, completa todos los campos");
             return;
           }
         const userData ={

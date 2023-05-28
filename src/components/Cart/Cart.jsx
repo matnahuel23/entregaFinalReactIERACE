@@ -2,6 +2,7 @@ import { useContext, useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import CartItem from "../CartItem/CartItem";
+import Swal from 'sweetalert2';
 
 const Cart = () => {
   const { cart, clearCart, total } = useContext(CartContext);
@@ -9,12 +10,19 @@ const Cart = () => {
   const [carritoVacio, setCarritoVacio] = useState(false);
 
   const handleClearCart = () => {
-    const confirmClear = window.confirm("¿Estás seguro de que deseas vaciar el carrito?");
-
-    if (confirmClear) {
-      clearCart();
-      setCarritoVacio(true);
-    }
+    Swal.fire({
+      title: '¿Estás seguro de que deseas vaciar el carrito?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Sí, vaciar carrito',
+      cancelButtonText: 'Cancelar',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        clearCart();
+        setCarritoVacio(true);
+        Swal.fire('Carrito vaciado', 'El carrito ha sido vaciado exitosamente', 'success');
+      }
+    });
   };
 
   useEffect(() => {
@@ -22,7 +30,6 @@ const Cart = () => {
       navigate('/');
     } 
     if (!cart || cart.length === 0) {
-      alert("Sin películas");
         navigate('/');
     }
   }, [cart, navigate]);
