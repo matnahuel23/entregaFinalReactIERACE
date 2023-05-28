@@ -1,29 +1,31 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import CartItem from "../CartItem/CartItem";
 
 const Cart = () => {
   const { cart, clearCart, total } = useContext(CartContext);
+  const navigate = useNavigate();
+  const [carritoVacio, setCarritoVacio] = useState(false);
 
   const handleClearCart = () => {
     const confirmClear = window.confirm("¿Estás seguro de que deseas vaciar el carrito?");
 
     if (confirmClear) {
       clearCart();
+      setCarritoVacio(true);
     }
   };
 
-  if (!cart || cart.length === 0) {
-    return (
-      <div>
-        <h1>No hay películas en el carrito</h1>
-        <Link to="/" className="Option">
-          Películas
-        </Link>
-      </div>
-    );
-  }
+  useEffect(() => {
+    if (carritoVacio) {
+      navigate('/');
+    } 
+    if (!cart || cart.length === 0) {
+      alert("Sin películas");
+        navigate('/');
+    }
+  }, [cart, navigate]);
 
   return (
     <div id="compraLista">
