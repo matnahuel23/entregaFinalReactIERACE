@@ -1,7 +1,4 @@
-# Ecommerce ReactJS
-
-  
-
+# Ecommerce ReactJS - CODERHOUSE
 ## Quién soy?
 
 Mi nombre es **Matías Nahuel IERACE** y esta es mi entrega final del curso de **ReactJS** en **CODERHOUSE**
