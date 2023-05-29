@@ -16,7 +16,6 @@ function App(){
   return (
     <div className="App">
       <BrowserRouter>
-      {/* ENVUELVO CONTEXT con el cartprovider */}
       <CartProvider> 
         <NavBar/>
           <Routes>
