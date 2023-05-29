@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { CartContext} from '../../context/CartContext';
 import { db } from "../../service/firebase/fireBaseConfig";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
+import Swal from 'sweetalert2';
 
 const Checkout = () => {
     const [loading, setLoading] = useState(false)
@@ -69,7 +70,10 @@ const Checkout = () => {
     }
 
     if (orderId) {
-        return <h1>El id de su pedido es: {orderId}</h1>
+        Swal.fire('Tu orden fue confirmada', `El id de su pedido es: <strong style="font-size: 20px">${orderId}</strong>`, 'success')
+        .then(() => {
+            window.location.href = '/';
+          });
     }
 
     return (
