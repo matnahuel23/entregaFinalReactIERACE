@@ -26,6 +26,9 @@ F --Pagar-->G(Datos Personales)--Completos correctamente-->H{Orden creada correc
 
 G--Error de carga de datos-->G
 ```
+## Video GIF demostración del proyecto
+[![/GIF/entregaFinalReactJS-IERACE.gif](/GIF/entregaFinalReactJS-IERACE.gif)](/GIF/entregaFinalReactJS-IERACE.gif)
+
 ## Capturas del proyecto
 ![capturas del proyecto](./images/capturas/captura1.png)
 
