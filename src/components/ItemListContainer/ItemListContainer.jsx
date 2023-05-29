@@ -4,6 +4,7 @@ import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { getDocs, collection, query, where } from "firebase/firestore";
 import { db } from "../../service/firebase/fireBaseConfig";
+import ReactLoading from "react-loading"
 
 const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]);
@@ -36,7 +37,14 @@ const ItemListContainer = ({ greeting }) => {
   return (
   <div id="presentacion">
       <h1>{greeting}</h1>
-      {loading ? <p>Cargando...</p> : <ItemList producto={products} />}
+      {
+        loading ? (
+        <div className='Carga'>
+            <ReactLoading  type="spin" color="#000" height={100} width={100} />
+            <h1 style={{ marginTop: '20px' }}>Cargando</h1>
+        </div>) 
+        : (<ItemList producto={products} />)
+      }
     </div>
   )
 };

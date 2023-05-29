@@ -5,10 +5,10 @@ import { Link, useLocation } from 'react-router-dom'
 import { CartContext} from '../../context/CartContext'
 
 const ItemDetail = () => {
-    const [quantityAdded, setQuantityAdded] = useState(0)
-    const {state} = useLocation()
+    const [quantityAdded, setQuantityAdded] = useState(0);
+    const {state} = useLocation();
     const {id, name, image, trailer, description, price, stock}= state ;
-    const {addItem} = useContext (CartContext)
+    const {addItem} = useContext (CartContext);
 
     const handleOnAdd = (quantity) => {
         setQuantityAdded(quantity)

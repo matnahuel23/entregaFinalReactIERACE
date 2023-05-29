@@ -4,6 +4,7 @@ import { CartContext} from '../../context/CartContext';
 import { db } from "../../service/firebase/fireBaseConfig";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
 import Swal from 'sweetalert2';
+import ReactLoading from "react-loading"
 
 const Checkout = () => {
     const [loading, setLoading] = useState(false)
@@ -65,16 +66,24 @@ const Checkout = () => {
             setLoading (false)
         }}
 
-    if (loading) {
-        return <h1>Se esta generando su orden...</h1>
-    }
-
-    if (orderId) {
-        Swal.fire('Tu orden fue confirmada', `El id de su pedido es: <strong style="font-size: 20px">${orderId}</strong>`, 'success')
-        .then(() => {
-            window.location.href = '/';
-          });
-    }
+        if (loading) {
+            return (
+              <div className='Carga'>
+                <ReactLoading type="spin" color="#000" height={100} width={100} />
+                <h1>Cargando</h1>
+              </div>
+            );
+          }
+        
+          if (orderId) {
+            Swal.fire({
+              title: 'Tu orden fue confirmada',
+              html: `El id de su pedido es: <strong style="font-size: 20px">${orderId}</strong>`,
+              icon: 'success'
+            }).then(() => {
+              window.location.href = '/';
+            });
+          }
 
     return (
         <div id="datosPersonales">
