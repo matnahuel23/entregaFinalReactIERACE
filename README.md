@@ -90,4 +90,4 @@ G--Error de carga de datos-->G
 
 ----------
 
-QUE LA FUERZA NOS ACOMPAÑE!!!
+QUE LA FUERZA NOS ACOMPAÑE y gracias por leer hasta aca!!
