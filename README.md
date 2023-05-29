@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# Ecommerce ReactJS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  
 
-## Available Scripts
+## Quién soy?
 
-In the project directory, you can run:
+Mi nombre es **Matías Nahuel IERACE** y esta es mi entrega final del curso de **ReactJS** en **CODERHOUSE**
+## Flujo de la página
 
-### `npm start`
+```mermaid
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+graph LR
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A((Página Principal)) --> B(Elijo)
 
-### `npm test`
+A --> C(Busco por categoría)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+B --> D(Cantidad de selección)
 
-### `npm run build`
+C --> B
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+D --> E[Continuar comprando]
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+E --SI-->A
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+E --NO-->F(Total pedido)--Seguir comprando-->A
 
-### `npm run eject`
+F --Pagar-->G(Datos Personales)--Completos correctamente-->H{Orden creada correctamente}-->A
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+G--Error de carga de datos-->G
+```
+## Capturas del proyecto
+![capturas del proyecto](./images/capturas/captura1.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![capturas del proyecto](./images/capturas/captura2.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  
 
-## Learn More
+![capturas del proyecto](./images/capturas/captura3.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![capturas del proyecto](./images/capturas/captura4.png)
 
-### Code Splitting
+  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![capturas del proyecto](./images/capturas/captura5.png)
+ 
 
-### Analyzing the Bundle Size
+![capturas del proyecto](./images/capturas/captura7.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Datos
 
-### Making a Progressive Web App
+-   **Estudiante:**  Matias Nahuel IERACE
+    
+-   **LinkedIn:**  [https://www.linkedin.com/in/mat%C3%ADas-nahuel-ierace-22276a175/](https://www.linkedin.com/in/mat%C3%ADas-nahuel-ierace-22276a175/)
+    
+-   **GitHub:**  [https://github.com/matnahuel23/entregaFinalReactIERACE.git](https://github.com/matnahuel23/entregaFinalReactIERACE.git)
+    
+-   **Curso:**  React JS / Coderhouse
+    
+-   **Comisión:**  43180
+    
+-   **Profesor:**  Adrián Escalante
+    
+-   **Tutor:**  Pablo Moraga
+    
+-   **Puedes ver el Proyecto en Vercel:  [https://entrega-final-react-ierace.vercel.app/](https://entrega-final-react-ierace.vercel.app/)  **
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### [](https://github.com/matnahuel23/entregaFinalReactIERACE/blob/master/README.md#frontend)Frontend
 
-### Advanced Configuration
+-   **React.js**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### [](https://github.com/matnahuel23/entregaFinalReactIERACE/blob/master/README.md#frontend-1)Frontend
 
-### Deployment
+-   **Firestore**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### [](https://github.com/matnahuel23/entregaFinalReactIERACE/blob/master/README.md#librer%C3%ADas)Librerías
 
-### `npm run build` fails to minify
+-   **Google fonts**
+-   **Sweetalert**
+-   **Toastify**
+-   **Bootstrap**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### [](https://github.com/matnahuel23/entregaFinalReactIERACE/blob/master/README.md#control-de-codigo-fuente)Control de código fuente
+
+-   **git**
+
+----------
+
+QUE LA FUERZA NOS ACOMPAÑE!!!
